@@ -3,10 +3,18 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { SearchCriteriaComponent } from './search-criteria/search-criteria.component';
+import { MovieListComponent } from './movie-list/movie-list.component';
+import { MovieListingComponent } from './movie-listing/movie-listing.component';
+import { WatchlistPageComponent } from './watchlist-page/watchlist-page.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SearchCriteriaComponent,
+    MovieListComponent,
+    MovieListingComponent,
+    WatchlistPageComponent
   ],
   imports: [
     BrowserModule,
