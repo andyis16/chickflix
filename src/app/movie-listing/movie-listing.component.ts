@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MovieListService } from '../movie-list.service';
 
 @Component({
   selector: 'app-movie-listing',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MovieListingComponent implements OnInit {
 
-  constructor() { }
+  constructor(public movieService: MovieListService) { }
 
   ngOnInit(): void {
+    this.movieService.getMovies();
   }
 
 }
