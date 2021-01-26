@@ -23,7 +23,6 @@ interface Movie {
   vote_count: number;
   video: boolean;
   vote_average: number;
-  runtime: number;
 }
 
 @Injectable({
@@ -32,6 +31,7 @@ interface Movie {
 
 export class MovieListService {
   apiKey = "278eef542547b1e69799de454cfb534b";
+  // url = "https://api.themoviedb.org/3/movie/509?api_key=278eef542547b1e69799de454cfb534b";
   url = "https://api.themoviedb.org/3/discover/movie";
   movies: Movie[];
   constructor(private http: HttpClient) {}
