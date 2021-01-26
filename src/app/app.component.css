@@ -1,0 +1,30 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  flex-flow: row wrap;
+  height: 100vh;
+  font-family: Futura, Arial, sans-serif;
+  background-color: #ffffff;
+}
+
+
+@media only screen and (min-width: 768px) {
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      border: none;
+      font-family: Futura, Arial, sans-serif;
+    }
+    body {
+      display: flex;
+      height: 100vh;
+    }
+
+
+
+}

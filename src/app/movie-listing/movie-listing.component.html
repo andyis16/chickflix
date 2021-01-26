@@ -1,10 +1,13 @@
 <div *ngFor="let movie of movieService.movies">
     <h3>{{movie.title}}</h3>
     <p>{{movie.overview}}
-        {{movie.runtime}}
+        {{movie.genre_ids}}
     </p>
+
+    <button class="add" (click)="addToWatchList()" title="Add To Watch List">★</button>
     
 </div>
+
 
 
 
