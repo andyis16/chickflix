@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { MovieListService } from '../movie-list.service';
 
 interface Movie {
@@ -24,28 +24,18 @@ interface Movie {
   styleUrls: ['./watchlist-page.component.css']
 })
 export class WatchlistPageComponent implements OnInit {
+  @Input() movie;
   public movies: Movie[];
   genre: number [] = [];
   rating: number = 0;
 
-  constructor(public movieService: MovieListService) { 
-   //  this.watchlistEntries = [
-   //   {title: "",  }
+  constructor(public movieService: MovieListService) {}
 
-   // ];
+  removeFromWatchList(deleteIndex: number) {
+    console.log(deleteIndex);
+    this.movieService.watchlist.splice(deleteIndex, 1);
+    console.log(this.movieService);
   }
-
-  // addToWatchList(event) {
-  //   const watchlist = this.watchlist;
-  //   this.movies.push({movieListing.id});  }
-
-  // removeFromWatchList(event) {
-  //   const id = event
-  //   const deleteIndex = this.movies.findIndex(function(movie) {
-  //     return movie.id === id;
-  //   });
-  //   this.movies.splice(deleteIndex, 1);
-  // }
 
   ngOnInit(): void {
   }

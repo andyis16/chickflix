@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { MovieListService } from '../movie-list.service';
 
 interface Movie {
@@ -52,6 +52,7 @@ export class SearchCriteriaComponent implements OnInit {
  // }
 
   ngOnInit(): void {
+   this.movieSearch.movies = [];
   }
 
   onSubmit() {
@@ -61,7 +62,7 @@ export class SearchCriteriaComponent implements OnInit {
       this.movieSearch.getMovies(this.selectedGenre,this.runtime,this.rating) ;
  
     }
- 
+
   }
 
 
