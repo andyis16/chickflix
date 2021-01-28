@@ -5,9 +5,10 @@ import { SearchCriteriaComponent } from './search-criteria/search-criteria.compo
 import { WatchlistPageComponent } from './watchlist-page/watchlist-page.component';
 
 const routes: Routes = [
-  {path: "search-criteria", component: SearchCriteriaComponent},
+  {path: "", component: SearchCriteriaComponent},
+   {path: "search-criteria", component: SearchCriteriaComponent},
   {path: "watchlist-page", component: WatchlistPageComponent}, 
-  {path: "", component: SearchCriteriaComponent}
+  
 ];
 
 @NgModule({

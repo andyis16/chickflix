@@ -6,28 +6,26 @@
   </select>-->
   
 <select name="genre" id="genre" placeholder="Any" [(ngModel)]="selectedGenre" (change)="selected()">
-<option value=35>Comedy</option> 
-<option value=80>Crime<option>
-<option value=10749>Romance</option>    
+    <option value=35>Comedy</option> 
+    <option value=80>Crime<option>
+    <option value=10749>Romance</option>    
 </select>
 
 
 <label>Ratings: </label> 
 <select name="rating" id="rating" placeholder="Any" [(ngModel)]="rating" (change)="selected()">
-<option value=4.0>4 stars and above</option> 
-<option value=7.0>7 stars and above<option>
-<option value=9.0>9 stars and above</option>
+    <option value=4.0>4 stars and above</option> 
+    <option value=7.0>7 stars and above<option>
+    <option value=9.0>9 stars and above</option>
 </select>
 
 
-<label>Ru t: </label> 
-    <select name="runtime" id="runtime" placeholder="Any" [(ngModel)]="runtime" (change)="selected()">
-    <option value=90>1.5 hours or less</option> 
-    <option value=120>2.0 hours or less</option>
-    <option value=150>2.5 hours or less</option>
-    </select>
+<label>Runtime: </label> 
+<select name="runtime" id="runtime" placeholder="Any" [(ngModel)]="runtime" (change)="selected()">
+        <option value=90>1.5 hours or less</option> 
+        <option value=120>2.0 hours or less</option>
+        <option value=150>2.5 hours or less</option>
+</select>
 
-<button class="submit" type="submit" >Search Results</button>
-
-
+<button class="submit" type="submit" (click)="onSubmit()">Search Results</button>
 </form>

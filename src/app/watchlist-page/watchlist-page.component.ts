@@ -29,10 +29,10 @@ export class WatchlistPageComponent implements OnInit {
   rating: number = 0;
 
   constructor(public movieService: MovieListService) { 
-    this.watchlistEntries = [
-      {title: "",  }
+   //  this.watchlistEntries = [
+   //   {title: "",  }
 
-    ];
+   // ];
   }
 
   // addToWatchList(event) {

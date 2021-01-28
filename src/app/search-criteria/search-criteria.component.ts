@@ -16,7 +16,9 @@ interface Movie {
 //  vote_count: number;
 //  video: boolean;
   vote_average: number;
+  runtime:number;
 }
+
 
 
 @Component({
@@ -28,16 +30,16 @@ export class SearchCriteriaComponent implements OnInit {
   genre: number [] = [];
   rating: number = 0;
   runtime: number = 0;
+  isSubmitted = false;
   
-  selectedGenre:string = "";
+  selectedGenre:any = "";
   data:Array<Object> = [
       {id: "35", name: "Comedy"},
       {id: "80", name: "Crime"},
       {id: "10749", name: "Romance"}
   ];
   selected(){
-    
-    console.log(this.selectedGenre,this.rating,this.runtime);
+    console.log(this.selectedGenre,this.runtime,this.rating);
     //this.movieSearch.getMovies();
   }
 
@@ -52,4 +54,15 @@ export class SearchCriteriaComponent implements OnInit {
   ngOnInit(): void {
   }
 
-}
+  onSubmit() {
+    
+    this.isSubmitted = true; 
+    console.log(this.selectedGenre,this.rating,this.runtime);
+      this.movieSearch.getMovies(this.selectedGenre,this.runtime,this.rating) ;
+ 
+    }
+ 
+  }
+
+
+

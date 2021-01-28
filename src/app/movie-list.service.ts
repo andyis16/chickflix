@@ -34,12 +34,15 @@ export class MovieListService {
  apiKey = "bec6ca9f47b7597b8806e211e6d91792";
   url = "https://api.themoviedb.org/3/discover/movie";
   movies: Movie[];
+   
   constructor(private http: HttpClient) {}
 
-  getMovies(rating:string,genre:string,runtime:number) {
+  getMovies(genre:number,runtime:number,rating:number) {
+    console.log(genre);
+ 
     const requestUrl =
-      this.getUrlWithAPIKey() + "&sort_by=release_date.desc&page=1"; // add whatever params you want from here: https://developers.themoviedb.org/3/discover/movie-discover
-
+      this.getUrlWithAPIKey() + "&with_genres=" + genre + "&with_runtime.lte="+runtime+"&vote_average.gte="+rating+"&sort_by=release_date.desc&page=1"; // add whatever params you want from here: https://developers.themoviedb.org/3/discover/movie-discover
+    console.log('requestURL:',requestUrl);
     this.http.get(requestUrl).subscribe(
       (response: Response) => {
         console.log(response.results);

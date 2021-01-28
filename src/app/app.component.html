@@ -1,9 +1,16 @@
 <h2>Movie Listing Works</h2>
+<!--<app-search-criteria></app-search-criteria>-->
+<nav>
+   <span>
+       <a routerLink="/search-criteria" routerLinkActive="active">Movie Search</a>
+    </span>
 
-<a routerLink="/search-criteria" routerLinkActive="active">Search</a>
+    <span>
+        <a routerLink="/watchlist-page" routerLinkActive="active">Watch List</a>
+    </span>
+</nav>
 
-<a routerLink="/watchlist-page" routerLinkActive="active">Watch List</a>
-<!-- <app-search-criteria></app-search-criteria> -->
-<!-- <app-movie-listing></app-movie-listing> -->
+<!--<app-search-criteria></app-search-criteria>-->
+<app-movie-listing></app-movie-listing>
 
 <router-outlet></router-outlet>
