@@ -1,7 +1,5 @@
-<div *ngFor="let watchlistEntry of movieService.watchlist; let i= index;"> {{watchlistEntry.title}}
-    <button (click) = "removeFromWatchList(i)" title="Remove from watch list">X</button>
+<body>
+<div id="watchListings" *ngFor="let watchlistEntry of movieService.watchlist; let i= index;"> {{watchlistEntry.title}}
+    <button class="removefromWatchList" (click) = "removeFromWatchList(i)" title="Remove from watch list">X</button>
 </div>
-
-
-    <!-- <button class="remove" (click)="removeFromWatchList()" title="Remove From Watch List">Remove</button> -->
-    
+</body>

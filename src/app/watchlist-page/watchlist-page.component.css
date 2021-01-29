@@ -1,0 +1,25 @@
+#watchListings {   
+    margin: 20px;
+    color: whitesmoke;
+    
+}
+
+.removefromWatchList {
+    float: right;
+    color: rgb(182, 59, 85);
+    background-color:whitesmoke;
+    border: none;
+    font-weight: 900;
+
+}
+
+@media only screen and (min-width: 768px) {
+
+    #watchListings {
+    
+        margin: 20px;
+        margin-left: 50px;
+        color: whitesmoke;        
+    }
+
+}
