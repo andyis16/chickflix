@@ -6,7 +6,7 @@ import { WatchlistPageComponent } from './watchlist-page/watchlist-page.componen
 
 const routes: Routes = [
   {path: "", component: SearchCriteriaComponent},
-   {path: "search-criteria", component: SearchCriteriaComponent},
+  {path: "search-criteria", component: SearchCriteriaComponent},
   {path: "watchlist-page", component: WatchlistPageComponent}, 
   
 ];

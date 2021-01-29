@@ -1,4 +1,3 @@
-<p>Watchlist</p>
 <div *ngFor="let watchlistEntry of movieService.watchlist; let i= index;"> {{watchlistEntry.title}}
     <button (click) = "removeFromWatchList(i)" title="Remove from watch list">X</button>
 </div>

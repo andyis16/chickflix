@@ -1,16 +1,31 @@
-<h2>Movie Listing Works</h2>
+
+<body>
+
+<div class ="flexheader">
+
+<img width="150" src="./assets/images/movie_search.png">   
+<h1>Chickflix Movie Search</h1>   
+
+</div>
+
 <!--<app-search-criteria></app-search-criteria>-->
-<nav>
+<div class = "flexcontainer">
+
+<!--<nav>-->
    <span>
-       <a routerLink="/search-criteria" routerLinkActive="active">Movie Search</a>
+       <a class = "search" routerLink="/search-criteria" routerLinkActive="active">Movie Search</a>
     </span>
 
     <span>
-        <a routerLink="/watchlist-page" routerLinkActive="active">Watch List</a>
+        <a class = "watchlist" routerLink="/watchlist-page" routerLinkActive="active">Watch List</a>
     </span>
-</nav>
+<!--</nav>-->
 
 <!--<app-search-criteria></app-search-criteria>-->
 <!--  -->
 
+
+
+</div>
 <router-outlet></router-outlet>
+</body>
