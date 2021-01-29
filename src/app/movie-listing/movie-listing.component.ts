@@ -17,6 +17,7 @@ interface Movie {
   // video?: boolean;
     vote_average: number;
     runtime:number;
+    isShow:boolean;
   }
 
 @Component({
@@ -26,6 +27,7 @@ interface Movie {
 })
 export class MovieListingComponent implements OnInit {
   public selectedMovie: any;
+  isShow = false;
   @Input() movie;
 
   constructor(public movieService: MovieListService) { }
@@ -41,7 +43,9 @@ export class MovieListingComponent implements OnInit {
   }
 
 
-  selectMovie(movie: Movie) {
-    this.selectedMovie = movie;
+  selectMovie(movie:Movie) {
+    console.log('movieoverview:',movie.overview);
+     movie.isShow = !movie.isShow;
+     return movie.overview;
   }
 }

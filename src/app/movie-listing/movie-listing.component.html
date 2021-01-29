@@ -1,6 +1,6 @@
 <div *ngFor="let movie of movieService.movies">
     <h3>{{movie.title}}</h3>
-    <p class="overview">{{movie.overview}}</p>
+    <div *ngIf="movie.isShow" class="overview">{{movie.overview}}</div>
     
     <button class="select" (click)="selectMovie(movie)">Movie Info</button>
 
