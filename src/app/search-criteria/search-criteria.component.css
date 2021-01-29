@@ -2,4 +2,16 @@
     display: flex;
     justify-content: center; 
     margin: 0 auto;
+    font-size: 20px;
+    color: wheat;
+    padding-left: 20px;
+    padding-right: 20px;
 }
+
+.submit {
+    color: #004242;
+    font-size: 20px;
+    margin-left: 10px;
+    background-color: wheat;
+}
+
