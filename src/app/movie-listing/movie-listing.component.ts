@@ -18,6 +18,7 @@ interface Movie {
     vote_average: number;
     runtime:number;
     isShow:boolean;
+    isToggle:boolean;
   }
 
 @Component({
@@ -27,22 +28,41 @@ interface Movie {
 })
 export class MovieListingComponent implements OnInit {
   public selectedMovie: any;
+  isToggle = false;
   isShow = false;
   @Input() movie;
 
-  constructor(public movieService: MovieListService) { }
+  constructor(public movieService: MovieListService) {} 
 
-  ngOnInit(): void {
-   // this.movieService.getMovies();
-  }
+  ngOnInit(): void {}
+  
 
   addToWatchList(movie: Movie) {
     console.log(movie);
-    this.movieService.watchlist.push(movie);
+    console.log('toggle:',movie.isToggle);
+    movie.isToggle = !movie.isToggle;      
+    if (!movie.isToggle)
+    {
+      /* Toggle color white*/
+      let index = this.movieService.watchlist.findIndex(m => m.title === movie.title);
+      console.log('index:',index);
+      this.movieService.watchlist.splice(index,1);
+      
+    }
+    else{
+       /* toggle color is RED */
+      if ((this.movieService.watchlist.includes(this.movie)) == false) 
+      {
+        console.log('includeFlag:',this.movieService.watchlist.includes(this.movie));
+
+         this.movieService.watchlist.push(movie);
+      }
+    }
+    
     console.log(this.movieService.watchlist);
+     
   }
-
-
+  
   selectMovie(movie:Movie) {
     console.log('movieoverview:',movie.overview);
      movie.isShow = !movie.isShow;

@@ -9,6 +9,7 @@ body {
   font-family: Futura, Arial, sans-serif;
   background-color:teal;
   height: 100vh;
+  overflow: auto;
 }
 
 h1 {

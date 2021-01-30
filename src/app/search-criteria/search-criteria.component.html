@@ -1,36 +1,43 @@
 
 <div class ="search">
 
-<form class="flexcontainer">
-<label>Genre: </label> 
-<!--<select [(ngModel)]="selectedGenre" placeholder="Any" (change)="selected()">
-    <option value=""> Please choose one </option>
-    <option *ngFor="let item of data" [value]="item.id">{{item.name}} {{item.id}}</option>
-  </select>-->
-  
-<select name="genre" id="genre" placeholder="Any" [(ngModel)]="selectedGenre" (change)="selected()">
-    <option value=35>Comedy</option> 
-    <option value=80>Crime<option>
-    <option value=10749>Romance</option>    
-</select>
+    <form class="flexcontainer">    
+        <!--<select [(ngModel)]="selectedGenre" placeholder="Any" (change)="selected()">
+           <option value=""> Please choose one </option>
+           <option *ngFor="let item of data" [value]="item.id">{{item.name}} {{item.id}}</option>
+        </select>-->
+            <div class="genre">
+                <label>Genre: </label> 
+                <select name="genre" id="genre" placeholder="Any" [(ngModel)]="selectedGenre" (change)="selected()">
+                    <!--<option value="">Select genre</option> -->
+                    <option selected value=35>Comedy</option> 
+                    <option value=80>Crime</option>
+                    <option value=10749>Romance</option>    
+                </select>
+            </div>
 
 
-<label>Ratings: </label> 
-<select name="rating" id="rating" placeholder="Any" [(ngModel)]="rating" (change)="selected()">
-    <option value=4.0>4 stars and above</option> 
-    <option value=7.0>7 stars and above<option>
-    <option value=9.0>9 stars and above</option>
-</select>
+            <div class="rating">
+                <label>Ratings: </label> 
+                <select name="rating" id="rating" placeholder="Any" [(ngModel)]="rating" (change)="selected()">
+                    <option selected value=4.0>4 stars and above</option> 
+                    <option value=7.0>7 stars and above</option>
+                    <option value=9.0>9 stars and above</option>
+                </select>
+            </div>
 
-
-<label>Runtime: </label> 
-<select name="runtime" id="runtime" placeholder="Any" [(ngModel)]="runtime" (change)="selected()">
-        <option value=90>1.5 hours or less</option> 
-        <option value=120>2.0 hours or less</option>
-        <option value=150>2.5 hours or less</option>
-</select>
-
-<button class="submit" type="submit" (click)="onSubmit()">Search Results</button>
-</form>
+            <div class="runtime">
+            <label>Runtime: </label> 
+                <select name="runtime" id="runtime" placeholder="Any" [(ngModel)]="runtime" (change)="selected()">
+                    <option selected value=90>1.5 hours or less</option> 
+                    <option value=120>2.0 hours or less</option>
+                    <option value=150>2.5 hours or less</option>
+                </select>
+            </div>
+    
+        <div>
+            <button class="submit" type="submit" (click)="onSubmit()">Search Results</button>
+        </div>
+    </form>
 </div>
 <app-movie-listing></app-movie-listing>
