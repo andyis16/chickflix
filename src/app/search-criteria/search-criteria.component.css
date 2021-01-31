@@ -19,6 +19,7 @@
 
 .rating,.genre,.runtime{
 padding-right: 20px;
+padding-bottom: 20px;
 }
 
 #rating,#genre,#runtime{

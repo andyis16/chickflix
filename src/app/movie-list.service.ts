@@ -25,6 +25,7 @@ interface Movie {
   vote_average: number;
 }
 
+
 @Injectable({
   providedIn: 'root'
 })
