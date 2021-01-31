@@ -1,25 +1,26 @@
-#watchListings {   
-    margin: 20px;
-    color: whitesmoke;
-    
+#watchListings {
+  margin: 30px 80px;
+  color: wheat;
 }
 
 .removefromWatchList {
-    float: right;
-    color: rgb(182, 59, 85);
-    background-color:whitesmoke;
-    border: none;
-    font-weight: 900;
-
+  float: right;
+  color: rgb(182, 59, 85);
+  background-color: wheat;
+  border: none;
+  font-weight: 900;
 }
 
+.showOveriew {
+  background-color: wheat;
+  color:  #004242;
+  size: 15px;
+  border-radius: 4px;
+}
 @media only screen and (min-width: 768px) {
-
-    #watchListings {
-    
-        margin: 20px;
-        margin-left: 50px;
-        color: whitesmoke;        
-    }
-
+  #watchListings {
+    margin: 30px 80px;
+    margin-right: 100px;
+    color: wheat;
+  }
 }

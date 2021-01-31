@@ -2,32 +2,33 @@ import { Component, OnInit, Input } from '@angular/core';
 import { MovieListService } from '../movie-list.service';
 
 interface Movie {
-   poster_path: string;
-   adult: boolean;
-   overview: string;
-   release_date: string;
-   genre_ids: number[];
-   id: number;
-   original_title: string;
-   original_language: string;
-   title: string;
-   backdrop_path: string;
-   popularity: number;
-   vote_count: number;
-   video: boolean;
-   vote_average: number;
-  }
+  poster_path: string;
+  adult: boolean;
+  overview: string;
+  release_date: string;
+  genre_ids: number[];
+  id: number;
+  original_title: string;
+  original_language: string;
+  title: string;
+  backdrop_path: string;
+  popularity: number;
+  vote_count: number;
+  video: boolean;
+  vote_average: number;
+  isShowing: boolean;
+}
 
 @Component({
   selector: 'app-watchlist-page',
   templateUrl: './watchlist-page.component.html',
-  styleUrls: ['./watchlist-page.component.css']
+  styleUrls: ['./watchlist-page.component.css'],
 })
 export class WatchlistPageComponent implements OnInit {
-  @Input() movie;
-  public movies: Movie[];
-  genre: number [] = [];
-  rating: number = 0;
+  @Input() watchlistEntry;
+  isShowing = false;
+  // genre: number[] = [];
+  // rating: number = 0;
 
   constructor(public movieService: MovieListService) {}
 
@@ -37,7 +38,11 @@ export class WatchlistPageComponent implements OnInit {
     console.log(this.movieService);
   }
 
-  ngOnInit(): void {
+  selectedMovie(watchlistEntry: Movie) {
+    console.log('movieoverview:', watchlistEntry.overview);
+    watchlistEntry.isShowing = !watchlistEntry.isShowing;
+    return watchlistEntry.overview;
   }
 
+  ngOnInit(): void {}
 }

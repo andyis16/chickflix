@@ -1,9 +1,12 @@
 .add {
     float: right;
+    color: rgb(182, 59, 85);
+    font-weight: 900;
+    margin-right: 30px;
 }
 
 .listing {
-    margin: 20px;
+    margin: 60px;
     color: #ffebcd;
 }
 
@@ -14,11 +17,34 @@
     border-radius: 4px;
 }
 
+.red {
+    background-color: red;
+    color: wheat;
+    font-weight: 900;
+}
+
+.white {
+    background-color: wheat;
+}
+
 @media only screen and (min-width: 768px) {
     .listing {
-      margin-left: 40px;
+      margin-left: 90px;
       padding: 0;
       border: none;
       font-family: Futura, Arial, sans-serif;
+    }
+
+    .add {
+        float: right;
+        color: rgb(182, 59, 85);
+        font-weight: 900;
+        margin-right: 60px;
+    }
+
+    .red {
+        background-color: red;
+        color: wheat;
+        font-weight: 900;
     }
 }

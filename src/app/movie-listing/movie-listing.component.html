@@ -1,10 +1,10 @@
-<div class ="listing" *ngFor="let movie of movieService.movies">
+<div class ="listing" *ngFor="let movie of movieService.movies; let i= index;">
     <h3>{{movie.title}}</h3>
     <div *ngIf="movie.isShow" class="overview">{{movie.overview}}</div>
     
     <button class="select" (click)="selectMovie(movie)">Movie Info</button>
 
-    <button class="add" (click)="addToWatchList(movie)" title="Add To Watch List">♥</button>
+    <button class="add" (click)="addToWatchList(movie)" [ngClass]="{'red':movie.isToggle,'white':!movie.isToggle}" title="Add To Watch List">♥</button>
     
 </div>
 

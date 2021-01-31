@@ -10,17 +10,28 @@
     padding-right: 20px;
 }
 
-runtime {
-    display: flex;
-    flex-direction: row;
-}
-
 .submit {
     color: #004242;
-    font-size: 20px;
+    font-size: 15px;
     background-color: wheat;
+    border-radius: 5px;
 }
 
+.rating,.genre,.runtime{
+padding-right: 20px;
+padding-bottom: 20px;
+}
+
+#rating,#genre,#runtime{
+        width: 120px;
+        height: 30px;
+        border: 1px solid #999;
+        font-size: 18px;
+        color: #1c87c9;
+        background-color: #eee;
+        border-radius: 5px;
+        box-shadow: 4px 4px #ccc;
+}
 
 @media only screen and (min-width: 768px) {
     .flexcontainer {
@@ -31,7 +42,7 @@ runtime {
         /*margin: 0 auto;*/
         font-size: 20px;
         color: wheat;
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: 50px;
+        padding-right: 50px;
 }
 }
