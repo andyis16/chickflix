@@ -1,16 +1,9 @@
-<<<<<<< HEAD
-<body>
-    
-<div id="watchListings" *ngFor="let watchlistEntry of movieService.watchlist; let i= index;"> {{watchlistEntry.title}}
-    
-=======
 <div id="watchListings" *ngFor="let watchlistEntry of movieService.watchlist; let i= index;"> 
     <h3>{{watchlistEntry.title}}</h3>
 
     <div *ngIf="watchlistEntry.isShowing" class="viewOverview">{{watchlistEntry.overview}}</div>
     
     <button class="showOveriew" (click)="selectedMovie(watchlistEntry)">Movie Info</button>
->>>>>>> e100ef2895252b7671ace6f3fcb192c0f89118e9
     <button class="removefromWatchList" (click) = "removeFromWatchList(i)" title="Remove from watch list">X</button>
 </div>
 

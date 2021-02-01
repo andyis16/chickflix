@@ -13,9 +13,9 @@ body {
 
 h1 {
   display: flex;
-  font-style: italic;
+  /*font-style: italic;*/
   font-size: 25px;
-  color: whitesmoke;
+  color: wheat;
   justify-content: center;
 }
 
