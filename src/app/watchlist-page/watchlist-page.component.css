@@ -16,6 +16,7 @@
   color:  #004242;
   size: 15px;
   border-radius: 4px;
+  margin: 5px;
 }
 @media only screen and (min-width: 768px) {
   #watchListings {
